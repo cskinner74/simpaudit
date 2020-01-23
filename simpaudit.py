@@ -36,9 +36,12 @@ print("*   SUID   *")
 print("************")
 print("Applications with sticky bit set:")
 print("Please wait, this process can take a while\n")
-findsuid = subprocess.Popen('find / -perm -4000 -exec ls -ldb {} \;', shell=True, stdout=subprocess.PIPE, encoding='utf-8')
-suid = findsuid.communicate()[0]
-print(suid)
+findsuid = subprocess.Popen('find / -perm /4000', shell=True, stdout=subprocess.PIPE, encoding='utf-8')
+for suid in findsuid.stdout:
+    suid = suid.strip('\n')
+    findsuidls = subprocess.Popen("ls -l "+suid, shell=True, stdout=subprocess.PIPE, encoding='utf-8')
+    suidls = findsuidls.communicate()[0]
+    print(suidls.strip('\n'))
 
 # Check user info
 # This section is ugly, but it works. Good luck.
