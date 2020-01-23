@@ -34,7 +34,8 @@ if os.geteuid() != 0:
 print("************")
 print("*   SUID   *")
 print("************")
-print("Applications with sticky bit set:\n")
+print("Applications with sticky bit set:")
+print("Please wait, this process can take a while\n")
 findsuid = subprocess.Popen('find / -perm -4000 -exec ls -ldb {} \;', shell=True, stdout=subprocess.PIPE, encoding='utf-8')
 suid = findsuid.communicate()[0]
 print(suid)
