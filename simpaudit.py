@@ -42,6 +42,7 @@ for suid in findsuid.stdout:
     findsuidls = subprocess.Popen("ls -l "+suid, shell=True, stdout=subprocess.PIPE, encoding='utf-8')
     suidls = findsuidls.communicate()[0]
     print(suidls.strip('\n'))
+print("\n")
 
 # Check user info
 # This section is ugly, but it works. Good luck.
