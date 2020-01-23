@@ -1,6 +1,7 @@
 # Simple Audit Tool
 
-This tool performs a quick audit of the system
+This tool performs a quick audit of the system.
+
 Has been tested on Ubuntu systems. Because of system calls, may not work on other distros, such as SUSE, RHE, etc.
 
 Checks for:
