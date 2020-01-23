@@ -12,7 +12,7 @@ Checks for:
 * Listening ports
 
 ### Requirements:
-* Python3 v3.5 or higher
+* Python3
 * root or sudo access to system
 
 ### To-do
