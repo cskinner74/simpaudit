@@ -11,7 +11,7 @@ Checks for:
 * Listening ports
 
 ### Requirements:
-* >= Python3.5
+* Python3 v3.5 or higher
 * root or sudo access to system
 
 ### To-do
