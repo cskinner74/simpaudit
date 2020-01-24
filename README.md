@@ -2,7 +2,8 @@
 
 This tool performs a quick audit of the system.
 
-Has been tested on Ubuntu systems. Because of system calls, may not work on other distros, such as SUSE, RHE, etc.
+Has been tested on Ubuntu systems.
+Does not work on Red Hat/CentOS. Support may be added in future releases.
 
 Checks for:
 * Applications with sticky bit set
