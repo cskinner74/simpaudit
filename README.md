@@ -2,11 +2,11 @@
 
 This tool performs a quick audit of the system.
 
-Has been tested on Debian, Ubuntu, CentOS
+Has been tested on Debian, Ubuntu, CentOS.
 
 Checks for:
 * Applications with sticky bit set
-* Users on system
+* Users with home dir on system (password expiration, etc.)
 * Services running
 * Processes running as root
 * Listening ports
@@ -16,6 +16,5 @@ Checks for:
 * root or sudo access to system
 
 ### To-do
-* Test on other distributions
 * Implement time functions for RedHat/CentOS
-* Split the script into defined functions for readability/maintenance
+* Split the script into defined functions for readability/maintenance/scaling
