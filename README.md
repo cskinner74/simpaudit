@@ -2,7 +2,7 @@
 
 This tool performs a quick audit of the system.
 
-Has been tested on Ubuntu systems.
+Has been tested on Debian/Ubuntu systems.
 Does not work on Red Hat/CentOS. Support may be added in future releases.
 
 Checks for:
