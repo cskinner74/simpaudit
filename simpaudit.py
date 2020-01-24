@@ -14,6 +14,7 @@ import sys
 import os
 import subprocess
 from datetime import date, datetime, timedelta
+import platform
 
 # Require Python 3.5+
 if sys.version_info[0] < 3:
@@ -64,13 +65,16 @@ for line in findusers.stdout:
     print("Last Password Change: "+lastchange)
     maxage = info.split(' ')[4]
     print("Max Password Age: "+maxage)
-    d0 = date(int(lastchange.split('/')[2]),int(lastchange.split('/')[0]),int(lastchange.split('/')[1])) #Change date
-    expiredate = d0 + timedelta(days=int(maxage))
-    print("Password expire date: "+expiredate.strftime("%m")+"/"+expiredate.strftime("%d")+"/"+expiredate.strftime("%Y"))
-    todaydate = date.today()
-    today = date(int(todaydate.strftime("%Y")),int(todaydate.strftime("%m")),int(todaydate.strftime("%d")))
-    remain = expiredate - today
-    print("Days remaining before password max age: "+str(remain).split(' ')[0])
+    
+    # Test if Debian or RH
+    if "Debian" in platform.uname().version or "Ubuntu" in platform.uname().version:
+        d0 = date(int(lastchange.split('/')[2]),int(lastchange.split('/')[0]),int(lastchange.split('/')[1])) #Change date
+        expiredate = d0 + timedelta(days=int(maxage))
+        print("Password expire date: "+expiredate.strftime("%m")+"/"+expiredate.strftime("%d")+"/"+expiredate.strftime("%Y"))
+        todaydate = date.today()
+        today = date(int(todaydate.strftime("%Y")),int(todaydate.strftime("%m")),int(todaydate.strftime("%d")))
+        remain = expiredate - today
+        print("Days remaining before password max age: "+str(remain).split(' ')[0])
     if int(maxage) > 364:
         print("*****Consider setting a shorter max age for security*****")
     inactive = info.split(' ')[6]
