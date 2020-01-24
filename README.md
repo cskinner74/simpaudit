@@ -16,5 +16,4 @@ Checks for:
 * root or sudo access to system
 
 ### To-do
-* Implement time functions for RedHat/CentOS
 * Split the script into defined functions for readability/maintenance/scaling
