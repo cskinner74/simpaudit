@@ -2,8 +2,7 @@
 
 This tool performs a quick audit of the system.
 
-Has been tested on Debian/Ubuntu systems.
-Does not work on Red Hat/CentOS. Support may be added in future releases.
+Has been tested on Debian, Ubuntu, CentOS
 
 Checks for:
 * Applications with sticky bit set
@@ -18,3 +17,5 @@ Checks for:
 
 ### To-do
 * Test on other distributions
+* Implement time functions for RedHat/CentOS
+* Split the script into defined functions for readability/maintenance
