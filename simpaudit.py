@@ -66,7 +66,7 @@ for line in findusers.stdout:
     maxage = info.split(' ')[4]
     print("Max Password Age: "+maxage)
     
-    # Test if Debian or RH
+    # Test if Debian/Ubuntu
     if "Debian" in platform.uname().version or "Ubuntu" in platform.uname().version:
         d0 = date(int(lastchange.split('/')[2]),int(lastchange.split('/')[0]),int(lastchange.split('/')[1])) #Change date
         expiredate = d0 + timedelta(days=int(maxage))
