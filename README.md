@@ -6,7 +6,7 @@ Has been tested on Debian, Ubuntu, CentOS.
 
 Checks for:
 * Applications with sticky bit set
-* Users with home dir on system (password expiration, etc.)
+* User information (finds users with home dir on system, checks password expiration information, etc.)
 * Services running
 * Processes running as root
 * Listening ports
